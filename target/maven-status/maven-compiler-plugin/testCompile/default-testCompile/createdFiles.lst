@@ -1,2 +1,3 @@
-hellocucumber/StepDefinitions.class
-hellocucumber/RunCucumberTest.class
+hellocucumber\StepDefinitionsCategories.class
+hellocucumber\StepDefinitions.class
+hellocucumber\RunCucumberTest.class
