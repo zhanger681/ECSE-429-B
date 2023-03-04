@@ -41,16 +41,15 @@ public class StepDefinitionsGeneral {
         }
     }
 
+    /* Story 16 */
 
-    /* Story 20 */
+    /*Normal flow */
 
-    /* Normal Flow */
-
-    @Given("a projects list {string}")
-    public void a_projects_list(String string) throws Exception{
-
+    @Given("the project {string}")
+    public void the_project(String string) throws Exception {
         JSONObject obj = new JSONObject();
 
+        obj.put("description", "this is the description of the project");
         obj.put("title", string);
 
         RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
@@ -68,17 +67,70 @@ public class StepDefinitionsGeneral {
 
         testid = (String) responseJson.get("id");
     }
-    @When("I create the project {string}")
-    public void i_create_the_project(String string) throws Exception {
+    @When("I view all projects")
+    public void i_view_all_projects() throws Exception {
 
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects")
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        statusCode = String.valueOf(response.code());
+
+
+    }
+    @Then("the status code of the system will now be {string}")
+    public void the_status_code_of_the_system_will_now_be(String string) {
+        assertEquals(string,statusCode);
+
+    }
+    @Then("the project  {string} will be shown")
+    public void the_project_will_be_shown(String string) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects")
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+
+        JSONObject jsonObject = new JSONObject(responseJson);
+        JSONArray projects = (JSONArray) jsonObject.get("projects");
+
+        for (Object projectObject : projects) {
+            JSONObject project = (JSONObject) projectObject;
+            String title = (String) project.get("title");
+            if(testid.equals(project.get("id"))) {
+                assertEquals(string, title);
+            }
+        }
+
+    }
+
+    /*Alternate Flow */
+    @Given("the project {string} with an id of {string}")
+    public void the_project_with_an_id_of(String string, String string2) throws Exception {
         JSONObject obj = new JSONObject();
 
+        obj.put("description", "this is the description of the project");
         obj.put("title", string);
+        obj.put("26",string2);
 
         RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
 
         Request request = new Request.Builder()
-                .url("http://localhost:4567/projects")
+                .url("http://localhost:4567/projects/"+ string2)
                 .post(body)
                 .build();
 
@@ -88,55 +140,62 @@ public class StepDefinitionsGeneral {
         JSONParser parser = new JSONParser();
         JSONObject responseJson = (JSONObject) parser.parse(responseBody);
 
-        errorMessage = (JSONArray) responseJson.get("errorMessages");
-        testid2 = (String) responseJson.get("id");
+        testid = (String) responseJson.get("id");
     }
-
-    @Then("the returned status code of the system is {string}")
-    public void the_returned_status_code_of_the_system_is(String string) throws Exception{
+    @When("I view the project")
+    public void i_view_the_project() throws Exception {
         Request request = new Request.Builder()
-                .url("http://localhost:4567/projects/"+testid2)
+                .url("http://localhost:4567/projects" )
                 .get()
                 .build();
 
         Response response = client.newCall(request).execute();
-        assertEquals(Integer.parseInt(string), response.code());
-    }
-
-
-    @Then("{string} will be in the list {string}")
-    public void will_be_in_the_list(String string, String string2) throws Exception {
-        Request request = new Request.Builder()
-                .url("http://localhost:4567/projects/"+testid2)
-                .get()
-                .build();
-
-        Response response = client.newCall(request).execute();
-        assertEquals(200, response.code());
-
         String responseBody = response.body().string();
 
         JSONParser parser = new JSONParser();
         JSONObject responseJson = (JSONObject) parser.parse(responseBody);
 
+        statusCode = String.valueOf(response.code());
+    }
+    @Then("the project  {string} with an id {string} will be shown")
+    public void the_project_with_an_id_will_be_shown(String string, String string2) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects/" +string2)
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
         JSONObject jsonObject = new JSONObject(responseJson);
-        JSONArray projects = (JSONArray) jsonObject.get("projects");
-        String[] parts = string2.split(",");
-        for (Object todoObject : projects ) {
-            JSONObject project = (JSONObject) todoObject;
-            String title = (String) project.get("title");
-            assertEquals(parts[1], title);
-        }
-    }
-    /* Error Flow */
 
-    @Then("the error message {string} is displayed")
-    public void the_error_message_is_displayed(String string) throws Exception{
-
-        for (Object errorObject : errorMessage) {
-            assertEquals(string, errorObject.toString());
-        }
     }
+
+
+
+    /*Error Flow */
+
+
+
+
+
+
+
+    /* Story 17 */
+
+
+
+    /* Story 18 */
+
+
+
+
+    /* Story 19 */
+
+
+
 
 
 
