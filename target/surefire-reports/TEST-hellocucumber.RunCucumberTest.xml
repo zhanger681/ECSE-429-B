@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="hellocucumber.RunCucumberTest" time="2.593" tests="36" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="hellocucumber.RunCucumberTest" time="3.127" tests="38" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.1.12-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Brian Zhang\AppData\Local\Temp\surefire1605010613059057978\surefirebooter-20230303184441549_3.jar C:\Users\Brian Zhang\AppData\Local\Temp\surefire1605010613059057978 2023-03-03T18-44-40_724-jvmRun1 surefire-20230303184441549_1tmp surefire_0-20230303184441549_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Brian Zhang\AppData\Local\Temp\surefire10168323637856589764\surefirebooter-20230303191409346_3.jar C:\Users\Brian Zhang\AppData\Local\Temp\surefire10168323637856589764 2023-03-03T19-14-08_365-jvmRun1 surefire-20230303191409346_1tmp surefire_0-20230303191409346_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Brian Zhang\git\ECSE-429-B\target\test-classes;C:\Users\Brian Zhang\git\ECSE-429-B\target\classes;C:\Users\Brian Zhang\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\Brian Zhang\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\Brian Zhang\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\Brian Zhang\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\Brian Zhang\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\Brian Zhang\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\Brian Zhang\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Brian Zhang\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Brian Zhang\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Brian Zhang\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Brian Zhang\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Brian Zhang\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Brian Zhang\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Brian Zhang\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\Brian Zhang\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\Brian Zhang\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\Brian Zhang\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\Brian Zhang\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Brian Zhang\.m2\repository\com\squareup\okhttp3\okhttp\4.9.0\okhttp-4.9.0.jar;C:\Users\Brian Zhang\.m2\repository\com\squareup\okio\okio\2.8.0\okio-2.8.0.jar;C:\Users\Brian Zhang\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.0\kotlin-stdlib-common-1.4.0.jar;C:\Users\Brian Zhang\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.4.10\kotlin-stdlib-1.4.10.jar;C:\Users\Brian Zhang\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\cucumber-java\7.11.1\cucumber-java-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\cucumber-core\7.11.1\cucumber-core-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\cucumber-gherkin\7.11.1\cucumber-gherkin-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.11.1\cucumber-gherkin-messages-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\gherkin\26.0.3\gherkin-26.0.3.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\messages\21.0.1\messages-21.0.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\datatable\7.11.1\datatable-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\cucumber-plugin\7.11.1\cucumber-plugin-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\docstring\7.11.1\docstring-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\html-formatter\20.2.1\html-formatter-20.2.1.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\junit-xml-formatter\0.1.0\junit-xml-formatter-0.1.0.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\ci-environment\9.1.0\ci-environment-9.1.0.jar;C:\Users\Brian Zhang\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Brian Zhang\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.11.1\cucumber-junit-platform-engine-7.11.1.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\platform\junit-platform-suite\1.9.2\junit-platform-suite-1.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\platform\junit-platform-suite-api\1.9.2\junit-platform-suite-api-1.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.9.2\junit-platform-suite-engine-1.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.9.2\junit-platform-suite-commons-1.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.2\junit-platform-launcher-1.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\Brian Zhang\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Brian Zhang\AppData\Local\Temp\surefire1605010613059057978\surefirebooter-20230303184441549_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Brian Zhang\AppData\Local\Temp\surefire10168323637856589764\surefirebooter-20230303191409346_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.1+12"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="0.689">
+  <testcase name="Example #1.1" classname="Examples" time="0.977">
     <system-out><![CDATA[
 Scenario Outline: Change description of a current task to a new one &amp#27;[90m# hellocucumber/ID01_ChangeTaskDescription.feature:13&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma task with description A "&amp#27;[0m&amp#27;[32m&amp#27;[1mProject part A add comments&amp#27;[0m&amp#27;[32m"&amp#27;[0m     &amp#27;[90m# hellocucumber.StepDefinitions.a_task_with_description(java.lang.String)&amp#27;[0m
@@ -65,7 +65,7 @@ Scenario Outline: Change description of a current task to a new one &amp#27;[90m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe task has description A "&amp#27;[0m&amp#27;[32m&amp#27;[1mnew comment&amp#27;[0m&amp#27;[32m"&amp#27;[0m                     &amp#27;[90m# hellocucumber.StepDefinitions.the_task_has_description(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.041">
+  <testcase name="Example #1.1" classname="Examples" time="0.071">
     <system-out><![CDATA[
 Scenario Outline: Change description of a current task                  &amp#27;[90m# hellocucumber/ID01_ChangeTaskDescription.feature:23&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma task with description B &amp#27;[0m&amp#27;[32m&amp#27;[1m"Project part A add comments"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitions.a_task_with_description_b(java.lang.String)&amp#27;[0m
@@ -73,7 +73,7 @@ Scenario Outline: Change description of a current task                  &amp#27;
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe task has description B &amp#27;[0m&amp#27;[32m&amp#27;[1m"Project part A add comments"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitions.the_task_has_description_b(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.053">
+  <testcase name="Example #1.1" classname="Examples" time="0.045">
     <system-out><![CDATA[
 Scenario Outline: Change description of a non existent task               &amp#27;[90m# hellocucumber/ID01_ChangeTaskDescription.feature:33&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma task with description C &amp#27;[0m&amp#27;[32m&amp#27;[1m"watch 360 lectures"&amp#27;[0m                    &amp#27;[90m# hellocucumber.StepDefinitions.a_task_with_description_c(java.lang.String)&amp#27;[0m
@@ -81,7 +81,7 @@ Scenario Outline: Change description of a non existent task               &amp#2
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe returned status code is &amp#27;[0m&amp#27;[32m&amp#27;[1m"404"&amp#27;[0m                                  &amp#27;[90m# hellocucumber.StepDefinitions.the_returned_status_code_is(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.064">
+  <testcase name="Example #1.1" classname="Examples" time="0.034">
     <system-out><![CDATA[
 Scenario Outline: Creating a new category              &amp#27;[90m# hellocucumber/ID06_CreateCategory.feature:14&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma categories list &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                       &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_categories_list(java.lang.String)&amp#27;[0m
@@ -90,7 +90,7 @@ Scenario Outline: Creating a new category              &amp#27;[90m# hellocucumb
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m&amp#27;[32m will be in the list &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home,Office"&amp#27;[0m       &amp#27;[90m# hellocucumber.StepDefinitionsCategories.will_be_in_the_list(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.037">
+  <testcase name="Example #1.1" classname="Examples" time="0.056">
     <system-out><![CDATA[
 Scenario Outline: Creating a new category with existing title &amp#27;[90m# hellocucumber/ID06_CreateCategory.feature:25&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma categories list &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                              &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_categories_list(java.lang.String)&amp#27;[0m
@@ -99,7 +99,7 @@ Scenario Outline: Creating a new category with existing title &amp#27;[90m# hell
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m&amp#27;[32m will be in the list &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home,Home"&amp#27;[0m                  &amp#27;[90m# hellocucumber.StepDefinitionsCategories.will_be_in_the_list(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.042">
+  <testcase name="Example #1.1" classname="Examples" time="0.049">
     <system-out><![CDATA[
 Scenario Outline: Creating a new category with empty title                         &amp#27;[90m# hellocucumber/ID06_CreateCategory.feature:36&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma categories list &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                                                   &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_categories_list(java.lang.String)&amp#27;[0m
@@ -108,7 +108,7 @@ Scenario Outline: Creating a new category with empty title                      
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Failed Validation: title : can not be empty"&amp#27;[0m&amp#27;[32m is displayed&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_is_displayed(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.062">
+  <testcase name="Example #1.1" classname="Examples" time="0.035">
     <system-out><![CDATA[
 Scenario Outline: Adding a project to a category              &amp#27;[90m# hellocucumber/ID07_AddingProjectToCategory.feature:15&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe category &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                                   &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category(java.lang.String)&amp#27;[0m
@@ -117,7 +117,7 @@ Scenario Outline: Adding a project to a category              &amp#27;[90m# hell
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe project &amp#27;[0m&amp#27;[32m&amp#27;[1m"project1"&amp#27;[0m&amp#27;[32m shall be in the category &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m  &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_project_shall_be_in_the_category(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.042">
+  <testcase name="Example #1.1" classname="Examples" time="0.063">
     <system-out><![CDATA[
 Scenario Outline: Adding a project to a category with empty title &amp#27;[90m# hellocucumber/ID07_AddingProjectToCategory.feature:26&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe category &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                                       &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category(java.lang.String)&amp#27;[0m
@@ -126,7 +126,7 @@ Scenario Outline: Adding a project to a category with empty title &amp#27;[90m# 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe project &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m shall be in the category &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m              &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_project_shall_be_in_the_category(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.043">
+  <testcase name="Example #1.1" classname="Examples" time="0.051">
     <system-out><![CDATA[
 Scenario Outline: Adding a project to a category with an id                            &amp#27;[90m# hellocucumber/ID07_AddingProjectToCategory.feature:36&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe category &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                                                            &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category(java.lang.String)&amp#27;[0m
@@ -134,7 +134,7 @@ Scenario Outline: Adding a project to a category with an id                     
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Could not find thing matching value for id"&amp#27;[0m&amp#27;[32m is shown for id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_is_shown_for_id(java.lang.String,int)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.073">
+  <testcase name="Example #1.1" classname="Examples" time="0.034">
     <system-out><![CDATA[
 Scenario Outline: Adjust a category description                         &amp#27;[90m# hellocucumber/ID08_AdjustoCategoryDescription.feature:13&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home in my room"&amp#27;[0m                 &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_description_a(java.lang.String)&amp#27;[0m
@@ -142,7 +142,7 @@ Scenario Outline: Adjust a category description                         &amp#27;
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe category has description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home in the living room"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_has_description_a(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.024">
+  <testcase name="Example #1.1" classname="Examples" time="0.074">
     <system-out><![CDATA[
 Scenario Outline: Adjust a category description                 &amp#27;[90m# hellocucumber/ID08_AdjustoCategoryDescription.feature:23&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home in my room"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_description_a(java.lang.String)&amp#27;[0m
@@ -150,7 +150,7 @@ Scenario Outline: Adjust a category description                 &amp#27;[90m# he
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe category has description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home in my room"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_has_description_a(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.038">
+  <testcase name="Example #1.1" classname="Examples" time="0.024">
     <system-out><![CDATA[
 Scenario Outline: Change description with empty category title                &amp#27;[90m# hellocucumber/ID08_AdjustoCategoryDescription.feature:34&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home after dinner"&amp#27;[0m                     &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_description_a(java.lang.String)&amp#27;[0m
@@ -159,7 +159,7 @@ Scenario Outline: Change description with empty category title                &a
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Failed Validation: title : can not be empty"&amp#27;[0m&amp#27;[32m appears&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_appears(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.029">
+  <testcase name="Example #1.1" classname="Examples" time="0.053">
     <system-out><![CDATA[
 Scenario Outline: Change category title          &amp#27;[90m# hellocucumber/ID09_ChangeCategoryTitle.feature:13&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m           &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -167,7 +167,7 @@ Scenario Outline: Change category title          &amp#27;[90m# hellocucumber/ID0
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe category has title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_has_title_a(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.052">
+  <testcase name="Example #1.1" classname="Examples" time="0.023">
     <system-out><![CDATA[
 Scenario Outline: Change category title with same title &amp#27;[90m# hellocucumber/ID09_ChangeCategoryTitle.feature:23&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                  &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -175,7 +175,7 @@ Scenario Outline: Change category title with same title &amp#27;[90m# hellocucum
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe category has title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                  &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_has_title_a(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.059">
+  <testcase name="Example #1.1" classname="Examples" time="0.034">
     <system-out><![CDATA[
 Scenario Outline: Change title with empty category title                      &amp#27;[90m# hellocucumber/ID09_ChangeCategoryTitle.feature:34&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                                        &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -184,7 +184,7 @@ Scenario Outline: Change title with empty category title                      &a
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Failed Validation: title : can not be empty"&amp#27;[0m&amp#27;[32m appears&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_appears(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.043">
+  <testcase name="Example #1.1" classname="Examples" time="0.053">
     <system-out><![CDATA[
 Scenario Outline: Remove category                      &amp#27;[90m# hellocucumber/ID10_RemoveCategory.feature:15&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                 &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -193,7 +193,7 @@ Scenario Outline: Remove category                      &amp#27;[90m# hellocucumb
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m&amp#27;[32m will be removed&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_with_title_a_will_be_removed(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="0.042">
+  <testcase name="Example #1.1" classname="Examples" time="0.047">
     <system-out><![CDATA[
 Scenario Outline: Remove category                                              &amp#27;[90m# hellocucumber/ID10_RemoveCategory.feature:26&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m&amp#27;[32m and project &amp#27;[0m&amp#27;[32m&amp#27;[1m"project1"&amp#27;[0m                  &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a_and_project(java.lang.String,java.lang.String)&amp#27;[0m
@@ -202,7 +202,17 @@ Scenario Outline: Remove category                                              &
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe relationship between &amp#27;[0m&amp#27;[32m&amp#27;[1m"project1"&amp#27;[0m&amp#27;[32m and the category &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m&amp#27;[32m is destroyed&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_relationship_between_and_the_category_is_destroyed(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.068">
+  <testcase name="Example #1.1" classname="Examples" time="0.034">
+    <system-out><![CDATA[
+Scenario Outline: Remove category with wrong id                                     &amp#27;[90m# hellocucumber/ID10_RemoveCategory.feature:38&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                                              &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI remove the category ID &amp#27;[0m&amp#27;[32m&amp#27;[1m5000&amp#27;[0m&amp#27;[32m and title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m                             &amp#27;[90m# hellocucumber.StepDefinitionsCategories.i_remove_the_category_id_and_title_a(java.lang.Integer,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe status code is &amp#27;[0m&amp#27;[32m&amp#27;[1m"404"&amp#27;[0m                                                     &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_status_code_is(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m&amp#27;[32m will be not be removed&amp#27;[0m                       &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_with_title_a_will_be_not_be_removed(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Could not find any instances with categories/5000"&amp#27;[0m&amp#27;[32m appears&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_appears(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.079">
     <system-out><![CDATA[
 Scenario Outline: Change description of a current task to a new one &amp#27;[90m# hellocucumber/ID01_ChangeTaskDescription.feature:14&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma task with description A "&amp#27;[0m&amp#27;[32m&amp#27;[1mProject part C add comments&amp#27;[0m&amp#27;[32m"&amp#27;[0m     &amp#27;[90m# hellocucumber.StepDefinitions.a_task_with_description(java.lang.String)&amp#27;[0m
@@ -210,7 +220,7 @@ Scenario Outline: Change description of a current task to a new one &amp#27;[90m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe task has description A "&amp#27;[0m&amp#27;[32m&amp#27;[1mstudy for midterms&amp#27;[0m&amp#27;[32m"&amp#27;[0m              &amp#27;[90m# hellocucumber.StepDefinitions.the_task_has_description(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.059">
+  <testcase name="Example #1.2" classname="Examples" time="0.056">
     <system-out><![CDATA[
 Scenario Outline: Change description of a current task    &amp#27;[90m# hellocucumber/ID01_ChangeTaskDescription.feature:24&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma task with description B &amp#27;[0m&amp#27;[32m&amp#27;[1m"watch Week 5 lectures"&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitions.a_task_with_description_b(java.lang.String)&amp#27;[0m
@@ -218,7 +228,7 @@ Scenario Outline: Change description of a current task    &amp#27;[90m# hellocuc
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe task has description B &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                      &amp#27;[90m# hellocucumber.StepDefinitions.the_task_has_description_b(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.046">
+  <testcase name="Example #1.2" classname="Examples" time="0.072">
     <system-out><![CDATA[
 Scenario Outline: Change description of a non existent task          &amp#27;[90m# hellocucumber/ID01_ChangeTaskDescription.feature:34&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma task with description C &amp#27;[0m&amp#27;[32m&amp#27;[1m"watch lectures"&amp#27;[0m                   &amp#27;[90m# hellocucumber.StepDefinitions.a_task_with_description_c(java.lang.String)&amp#27;[0m
@@ -226,7 +236,7 @@ Scenario Outline: Change description of a non existent task          &amp#27;[90
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe returned status code is &amp#27;[0m&amp#27;[32m&amp#27;[1m"404"&amp#27;[0m                             &amp#27;[90m# hellocucumber.StepDefinitions.the_returned_status_code_is(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.076">
+  <testcase name="Example #1.2" classname="Examples" time="0.059">
     <system-out><![CDATA[
 Scenario Outline: Creating a new category              &amp#27;[90m# hellocucumber/ID06_CreateCategory.feature:15&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma categories list &amp#27;[0m&amp#27;[32m&amp#27;[1m"School"&amp#27;[0m                     &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_categories_list(java.lang.String)&amp#27;[0m
@@ -235,7 +245,7 @@ Scenario Outline: Creating a new category              &amp#27;[90m# hellocucumb
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1m"Library"&amp#27;[0m&amp#27;[32m will be in the list &amp#27;[0m&amp#27;[32m&amp#27;[1m"School,Library"&amp#27;[0m   &amp#27;[90m# hellocucumber.StepDefinitionsCategories.will_be_in_the_list(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.051">
+  <testcase name="Example #1.2" classname="Examples" time="0.052">
     <system-out><![CDATA[
 Scenario Outline: Creating a new category with existing title &amp#27;[90m# hellocucumber/ID06_CreateCategory.feature:26&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma categories list &amp#27;[0m&amp#27;[32m&amp#27;[1m"School"&amp#27;[0m                            &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_categories_list(java.lang.String)&amp#27;[0m
@@ -244,7 +254,7 @@ Scenario Outline: Creating a new category with existing title &amp#27;[90m# hell
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32m&amp#27;[0m&amp#27;[32m&amp#27;[1m"School"&amp#27;[0m&amp#27;[32m will be in the list &amp#27;[0m&amp#27;[32m&amp#27;[1m"School,School"&amp#27;[0m            &amp#27;[90m# hellocucumber.StepDefinitionsCategories.will_be_in_the_list(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.04">
+  <testcase name="Example #1.2" classname="Examples" time="0.027">
     <system-out><![CDATA[
 Scenario Outline: Creating a new category with empty title                         &amp#27;[90m# hellocucumber/ID06_CreateCategory.feature:37&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma categories list &amp#27;[0m&amp#27;[32m&amp#27;[1m"School"&amp#27;[0m                                                 &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_categories_list(java.lang.String)&amp#27;[0m
@@ -253,7 +263,7 @@ Scenario Outline: Creating a new category with empty title                      
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Failed Validation: title : can not be empty"&amp#27;[0m&amp#27;[32m is displayed&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_is_displayed(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.043">
+  <testcase name="Example #1.2" classname="Examples" time="0.051">
     <system-out><![CDATA[
 Scenario Outline: Adding a project to a category                &amp#27;[90m# hellocucumber/ID07_AddingProjectToCategory.feature:16&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe category &amp#27;[0m&amp#27;[32m&amp#27;[1m"School"&amp#27;[0m                                   &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category(java.lang.String)&amp#27;[0m
@@ -271,7 +281,7 @@ Scenario Outline: Adding a project to a category with empty title &amp#27;[90m# 
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe project &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m shall be in the category &amp#27;[0m&amp#27;[32m&amp#27;[1m"School"&amp#27;[0m            &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_project_shall_be_in_the_category(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.031">
+  <testcase name="Example #1.2" classname="Examples" time="0.034">
     <system-out><![CDATA[
 Scenario Outline: Adding a project to a category with an id                            &amp#27;[90m# hellocucumber/ID07_AddingProjectToCategory.feature:37&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe category &amp#27;[0m&amp#27;[32m&amp#27;[1m"School"&amp#27;[0m                                                          &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category(java.lang.String)&amp#27;[0m
@@ -279,7 +289,7 @@ Scenario Outline: Adding a project to a category with an id                     
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Could not find thing matching value for id"&amp#27;[0m&amp#27;[32m is shown for id &amp#27;[0m&amp#27;[32m&amp#27;[1m5&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_is_shown_for_id(java.lang.String,int)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.039">
+  <testcase name="Example #1.2" classname="Examples" time="0.036">
     <system-out><![CDATA[
 Scenario Outline: Adjust a category description                         &amp#27;[90m# hellocucumber/ID08_AdjustoCategoryDescription.feature:14&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office in the conference room"&amp#27;[0m   &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_description_a(java.lang.String)&amp#27;[0m
@@ -287,7 +297,7 @@ Scenario Outline: Adjust a category description                         &amp#27;
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe category has description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office in the main room"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_has_description_a(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.029">
+  <testcase name="Example #1.2" classname="Examples" time="0.046">
     <system-out><![CDATA[
 Scenario Outline: Adjust a category description                       &amp#27;[90m# hellocucumber/ID08_AdjustoCategoryDescription.feature:24&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office in the conference room"&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_description_a(java.lang.String)&amp#27;[0m
@@ -304,7 +314,7 @@ Scenario Outline: Change description with empty category title                &a
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Failed Validation: title : can not be empty"&amp#27;[0m&amp#27;[32m appears&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_appears(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.038">
+  <testcase name="Example #1.2" classname="Examples" time="0.036">
     <system-out><![CDATA[
 Scenario Outline: Change category title        &amp#27;[90m# hellocucumber/ID09_ChangeCategoryTitle.feature:14&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m       &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -312,7 +322,7 @@ Scenario Outline: Change category title        &amp#27;[90m# hellocucumber/ID09_
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe category has title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home"&amp#27;[0m         &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_has_title_a(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.023">
+  <testcase name="Example #1.2" classname="Examples" time="0.032">
     <system-out><![CDATA[
 Scenario Outline: Change category title with same title &amp#27;[90m# hellocucumber/ID09_ChangeCategoryTitle.feature:24&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m                &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -320,7 +330,7 @@ Scenario Outline: Change category title with same title &amp#27;[90m# hellocucum
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe category has title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m                &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_has_title_a(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.043">
+  <testcase name="Example #1.2" classname="Examples" time="0.052">
     <system-out><![CDATA[
 Scenario Outline: Change title with empty category title                      &amp#27;[90m# hellocucumber/ID09_ChangeCategoryTitle.feature:35&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m                                      &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -329,7 +339,7 @@ Scenario Outline: Change title with empty category title                      &a
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Failed Validation: title : can not be empty"&amp#27;[0m&amp#27;[32m appears&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_appears(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.029">
+  <testcase name="Example #1.2" classname="Examples" time="0.033">
     <system-out><![CDATA[
 Scenario Outline: Remove category                        &amp#27;[90m# hellocucumber/ID10_RemoveCategory.feature:16&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m                 &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
@@ -338,7 +348,7 @@ Scenario Outline: Remove category                        &amp#27;[90m# hellocucu
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m&amp#27;[32m will be removed&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_with_title_a_will_be_removed(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="0.059">
+  <testcase name="Example #1.2" classname="Examples" time="0.061">
     <system-out><![CDATA[
 Scenario Outline: Remove category                                                &amp#27;[90m# hellocucumber/ID10_RemoveCategory.feature:27&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m&amp#27;[32m and project &amp#27;[0m&amp#27;[32m&amp#27;[1m"project2"&amp#27;[0m                  &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a_and_project(java.lang.String,java.lang.String)&amp#27;[0m
@@ -347,7 +357,17 @@ Scenario Outline: Remove category                                               
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe relationship between &amp#27;[0m&amp#27;[32m&amp#27;[1m"project2"&amp#27;[0m&amp#27;[32m and the category &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m&amp#27;[32m is destroyed&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_relationship_between_and_the_category_is_destroyed(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.039">
+  <testcase name="Example #1.2" classname="Examples" time="0.038">
+    <system-out><![CDATA[
+Scenario Outline: Remove category with wrong id                                     &amp#27;[90m# hellocucumber/ID10_RemoveCategory.feature:39&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m                                            &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_title_a(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI remove the category ID &amp#27;[0m&amp#27;[32m&amp#27;[1m5000&amp#27;[0m&amp#27;[32m and title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m                           &amp#27;[90m# hellocucumber.StepDefinitionsCategories.i_remove_the_category_id_and_title_a(java.lang.Integer,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe status code is &amp#27;[0m&amp#27;[32m&amp#27;[1m"404"&amp#27;[0m                                                     &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_status_code_is(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe category with title A &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office"&amp#27;[0m&amp#27;[32m will be not be removed&amp#27;[0m                     &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_category_with_title_a_will_be_not_be_removed(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Could not find any instances with categories/5000"&amp#27;[0m&amp#27;[32m appears&amp#27;[0m &amp#27;[90m# hellocucumber.StepDefinitionsCategories.the_error_message_appears(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="0.093">
     <system-out><![CDATA[
 Scenario Outline: Change description of a non existent task       &amp#27;[90m# hellocucumber/ID01_ChangeTaskDescription.feature:35&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma task with description C &amp#27;[0m&amp#27;[32m&amp#27;[1m"watch recordings"&amp#27;[0m              &amp#27;[90m# hellocucumber.StepDefinitions.a_task_with_description_c(java.lang.String)&amp#27;[0m
@@ -355,7 +375,7 @@ Scenario Outline: Change description of a non existent task       &amp#27;[90m# 
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe returned status code is &amp#27;[0m&amp#27;[32m&amp#27;[1m"404"&amp#27;[0m                          &amp#27;[90m# hellocucumber.StepDefinitions.the_returned_status_code_is(java.lang.String)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="0.021">
+  <testcase name="Example #1.3" classname="Examples" time="0.048">
     <system-out><![CDATA[
 Scenario Outline: Change description with empty category title                &amp#27;[90m# hellocucumber/ID08_AdjustoCategoryDescription.feature:36&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32ma category with description A &amp#27;[0m&amp#27;[32m&amp#27;[1m"During lunch break"&amp#27;[0m                    &amp#27;[90m# hellocucumber.StepDefinitionsCategories.a_category_with_description_a(java.lang.String)&amp#27;[0m

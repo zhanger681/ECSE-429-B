@@ -612,5 +612,61 @@ public class StepDefinitionsCategories {
         }
     }
 
+    @When("I remove the category ID {int} and title A {string}")
+    public void i_remove_the_category_id_and_title_a(Integer int1, String string) throws Exception{
+        JSONObject obj = new JSONObject();
+
+        obj.put("title", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/"+int1)
+                .delete(body)
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+
+
+        statusCode = String.valueOf(putResponse.code());
+        if(!statusCode.equals(200)) {
+                    String responseBody = putResponse.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+            errorMessage = (JSONArray) responseJson.get("errorMessages");
+        }
+    }
+    @Then("the category with title A {string} will be not be removed")
+    public void the_category_with_title_a_will_be_not_be_removed(String string) throws Exception{
+        JSONObject obj = new JSONObject();
+
+        obj.put("title", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/"+testid)
+                .get()
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+        String responseBody = putResponse.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+        JSONObject jsonObject = new JSONObject(responseJson);
+
+        JSONArray categories = (JSONArray) jsonObject.get("categories");
+
+        for (Object categoryObject : categories) {
+            JSONObject category = (JSONObject) categoryObject;
+            String title = (String) category.get("title");
+            if(testid.equals(category.get("id"))) {
+                assertEquals(string, title);
+            }
+        }
+    }
+
 
 }
