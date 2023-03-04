@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hellocucumber" />
+        <module name="ECSE-429-B" />
       </profile>
     </annotationProcessing>
   </component>
