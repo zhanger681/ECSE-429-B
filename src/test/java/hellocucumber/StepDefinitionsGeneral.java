@@ -602,9 +602,148 @@ public class StepDefinitionsGeneral {
     /* Story 20 */
 
     /*Normal flow */
-
     /*Alternate flow */
+    @Given("a project list {string}")
+    public void a_project_list(String string) throws Exception {
+        JSONObject obj = new JSONObject();
 
-    /*Error flow */
+        obj.put("title", string);
+
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I create the project {string}")
+    public void i_create_the_project(String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        obj.put("title", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        errorMessage = (JSONArray) responseJson.get("errorMessages");
+        testid1 = (String) responseJson.get("id");
+    }
+    @Then("the returned project status code of the system is {string}")
+    public void the_returned_project_status_code_of_the_system_is(String string) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects/"+testid1)
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+    }
+    @Then("{string} project will be in the list {string}")
+    public void project_will_be_in_the_list(String string, String string2) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects/"+testid1)
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        assertEquals(200, response.code());
+
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        JSONObject jsonObject = new JSONObject(responseJson);
+        JSONArray projects = (JSONArray) jsonObject.get("projects");
+        String[] parts = string2.split(",");
+        for (Object todoObject : projects) {
+            JSONObject category = (JSONObject) todoObject;
+            String title = (String) category.get("title");
+            assertEquals(parts[1], title);
+        }
+    }
+
+    /*Error flow*/
+
+    @Given("an existing project {string}")
+    public void an_existing_project(String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        obj.put("description", "this is the description of the project");
+        obj.put("title", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I create a project of the todolist with ang id {int} and {string}")
+    public void i_create_a_project_of_the_todolist_with_ang_id_and(Integer int1, String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects/"+int1)
+                .delete(body)
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+
+        statusCode = String.valueOf(putResponse.code());
+
+        if(!statusCode.equals(200)) {
+            String responseBody = putResponse.body().string();
+
+            JSONParser parser = new JSONParser();
+            JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+            errorMessage = (JSONArray) responseJson.get("errorMessages");
+        }
+    }
+    @When("project {string} will be not be created to the user")
+    public void project_will_be_not_be_created_to_the_user(String string) {
+        assertEquals("404", statusCode);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
