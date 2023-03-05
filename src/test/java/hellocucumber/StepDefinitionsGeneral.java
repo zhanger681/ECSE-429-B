@@ -226,23 +226,223 @@ public class StepDefinitionsGeneral {
     }
 
 
-
-
-
-
-
-
-
     /* Story 17 */
+
+    /*Normal flow */
+    @Given("the category of the todolist exists {string}")
+    public void the_category_of_the_todolist_exists(String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        obj.put("description", "this is the description of the category");
+        obj.put("title category", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I view all categories")
+    public void i_view_all_categories() throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories")
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        statusCode = String.valueOf(response.code());
+    }
+    @Then("the status code of the todo list system will now become {string}")
+    public void the_status_code_of_the_todo_list_system_will_now_become(String string) {
+        assertEquals(string,statusCode);
+    }
+    @Then("the category  {string} will be shown to the user")
+    public void the_category_will_be_shown_to_the_user(String string) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories")
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+
+        JSONObject jsonObject = new JSONObject(responseJson);
+        JSONArray categories = (JSONArray) jsonObject.get("categories");
+
+        for (Object projectObject : categories) {
+            JSONObject project = (JSONObject) projectObject;
+            String title = (String) project.get("title");
+        }
+    }
+
+
+    /*Alternate flow */
+
+    @Given("the category in the todolist app {string} with an existing id of {string}")
+    public void the_category_in_the_todolist_app_with_an_existing_id_of(String string, String string2) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        obj.put("description", "this is the description of the category");
+        obj.put("title", string);
+        obj.put("26",string2);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/"+ string2)
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I view the category of that specific id")
+    public void i_view_the_category_of_that_specific_id() throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories" )
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        statusCode = String.valueOf(response.code());
+    }
+    @Then("the status code of the management system will now be {string}")
+    public void the_status_code_of_the_management_system_will_now_be(String string) {
+        assertEquals(string,statusCode);
+    }
+    @Then("the category  {string} with an existing id {string} will be shown to the user")
+    public void the_category_with_an_existing_id_will_be_shown_to_the_user(String string, String string2) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories")
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        JSONObject jsonObject = new JSONObject(responseJson);
+        JSONArray categories = (JSONArray) jsonObject.get("categories");
+
+        for (Object projectObject : categories) {
+            JSONObject project = (JSONObject) projectObject;
+            String title = (String) project.get("title");
+        }
+    }
+
+    /*Error flow */
+
+    @Given("a category {string}")
+    public void a_category(String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        obj.put("description", "this is the description of the category");
+        obj.put("title category", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I view a category of the todolist with the wrong id {int} and {string}")
+    public void i_view_a_category_of_the_todolist_with_the_wrong_id_and(Integer int1, String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/"+int1)
+                .delete(body)
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+
+        statusCode = String.valueOf(putResponse.code());
+
+        if(!statusCode.equals(200)) {
+            String responseBody = putResponse.body().string();
+
+            JSONParser parser = new JSONParser();
+            JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+            errorMessage = (JSONArray) responseJson.get("errorMessages");
+        }
+    }
+    @Then("category {string} will be not be viewed to the user")
+    public void category_will_be_not_be_viewed_to_the_user(String string) {
+        assertEquals("404", statusCode);
+    }
+
+
+
 
     /* Story 18 */
 
+    /*Normal flow */
+
+    /*Alternate flow */
+
+    /*Error flow */
+
+
+
+
     /* Story 19 */
 
+    /*Normal flow */
+
+    /*Alternate flow */
+
+    /*Error flow */
 
 
 
 
+    /* Story 20 */
 
+    /*Normal flow */
+
+    /*Alternate flow */
+
+    /*Error flow */
 
 }
