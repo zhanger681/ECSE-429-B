@@ -23,11 +23,20 @@ Feature: View projects
     And the project  "<existing_project>" with an id "<Id>" will be shown
 
     Examples:
-      | existing_project   |Id    | statusCode |
-      | Project1           |26         | 200        |
-
+      | existing_project| Id| statusCode|
+      | Project1        | 26| 200       |
 
   # Error Flow
+
+  Scenario Outline: View project with a wrong id
+
+    Given a project "<existing_project>"
+    When I view a project with id <ID> and "<existing_project>"
+    And project "<existing_project>" will be not be viewed
+    Examples:
+      | existing_project  | ID    |statusCode   |error_message                              |
+      | Project1               | 5000  |404          |Could not find any instances with project|
+      | Project2              | 5000  |404          |Could not find any instances with project|
 
 
 

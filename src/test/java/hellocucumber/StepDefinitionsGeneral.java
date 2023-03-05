@@ -173,9 +173,59 @@ public class StepDefinitionsGeneral {
 
     }
 
+    /*Error flow */
+
+    @Given("a project {string}")
+    public void a_project(String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        obj.put("description", "this is the description of the project");
+        obj.put("title", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I view a project with id {int} and {string}")
+    public void i_view_a_project_with_id_and(Integer int1, String string) throws Exception {
+        JSONObject obj = new JSONObject();
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/projects/"+int1)
+                .delete(body)
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+
+        statusCode = String.valueOf(putResponse.code());
+
+        if(!statusCode.equals(200)) {
+            String responseBody = putResponse.body().string();
+
+            JSONParser parser = new JSONParser();
+            JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+            errorMessage = (JSONArray) responseJson.get("errorMessages");
+        }
+    }
+    @Then("project {string} will be not be viewed")
+    public void project_will_be_not_be_viewed(String string) {
+        assertEquals("404", statusCode);
+    }
 
 
-    /*Error Flow */
 
 
 
@@ -185,12 +235,7 @@ public class StepDefinitionsGeneral {
 
     /* Story 17 */
 
-
-
     /* Story 18 */
-
-
-
 
     /* Story 19 */
 
