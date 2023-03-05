@@ -412,19 +412,157 @@ public class StepDefinitionsGeneral {
         assertEquals("404", statusCode);
     }
 
-
-
     /* Story 18 */
-
     /*Normal flow */
-
     /*Alternate flow */
+    @Given("a category with priority A {string}")
+    public void a_category_with_priority_a(String string) throws Exception {
+        String title = "Random category";
 
-    /*Error flow */
+        JSONObject obj = new JSONObject();
+
+        obj.put("title", title);
+        obj.put("description", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I update the category priority A to {string}")
+    public void i_update_the_category_priority_a_to(String string) throws Exception {
+        String title = "Random category";
+
+
+        JSONObject obj = new JSONObject();
+
+        obj.put("title", title);
+        obj.put("description", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/"+testid)
+                .put(body)
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+    }
+
+    @When("I update the category A {string} with priority {string}")
+    public void i_update_the_category_a_with_priority(String string, String string2) throws Exception {
+        String title = "Random category";
+
+
+        JSONObject obj = new JSONObject();
+
+        obj.put("title", title);
+        obj.put("description", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/"+testid)
+                .put(body)
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+    }
+    @Then("the category has priority A {string}")
+    public void the_category_has_priority_a(String string) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/"+testid)
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        assertEquals(200, response.code());
+
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        JSONObject jsonObject = new JSONObject(responseJson);
+        JSONArray categories = (JSONArray) jsonObject.get("categories");
+
+        for (Object categoryObject : categories) {
+            JSONObject category = (JSONObject) categoryObject;
+            String description = (String) category.get("description");
+            if(testid.equals(category.get("id"))) {
+                assertEquals(string, description);
+            }
+        }
+    }
 
 
 
+    /* Error flow */
 
+    @Given("a task with priority  {string}")
+    public void a_task_with_priority(String string) throws Exception {
+        JSONObject obj = new JSONObject();
+        obj.put("HIGH", string);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories")
+                .post(body)
+                .build();
+
+        Response response = client.newCall(request).execute();
+        String responseBody = response.body().string();
+
+        JSONParser parser = new JSONParser();
+        JSONObject responseJson = (JSONObject) parser.parse(responseBody);
+
+        testid = (String) responseJson.get("id");
+    }
+    @When("I update the priority  {string} with a valid priority {string}")
+    public void i_update_the_priority_with_a_valid_priority(String string, String string2) throws Exception {
+        String title = "Random todo";
+        boolean doneStatus = false;
+        String description =  "new description";
+
+        JSONObject obj = new JSONObject();
+
+        obj.put("title", title);
+        obj.put("doneStatus", doneStatus);
+        obj.put("LOW", string2);
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), obj.toString());
+
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/123456")
+                .put(body)
+                .build();
+
+        Response putResponse = client.newCall(request).execute();
+    }
+    @Then("the status code that is returned is is {string}")
+    public void the_status_code_that_is_returned_is_is(String string) throws Exception {
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/categories/123456")
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        assertEquals(404, response.code());
+    }
+
+
+    
     /* Story 19 */
 
     /*Normal flow */
@@ -732,6 +870,8 @@ public class StepDefinitionsGeneral {
     public void project_will_be_not_be_created_to_the_user(String string) {
         assertEquals("404", statusCode);
     }
+
+
 
 
 
