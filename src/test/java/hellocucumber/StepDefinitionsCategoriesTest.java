@@ -18,7 +18,7 @@ import java.io.IOException;
 
 
 @TestMethodOrder(Random.class)
-public class StepDefinitionsCategories {
+public class StepDefinitionsCategoriesTest {
     /* Story 6 */
     String testid;
     String testid2;//added for Categories

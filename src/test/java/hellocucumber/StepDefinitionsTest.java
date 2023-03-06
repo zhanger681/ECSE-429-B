@@ -19,7 +19,7 @@ import java.io.IOException;
 
 
 @TestMethodOrder(Random.class)
-public class StepDefinitions {
+public class StepDefinitionsTest {
 
     private static boolean isApiAvailable;
     OkHttpClient client = new OkHttpClient();
@@ -1002,5 +1002,17 @@ public class StepDefinitions {
 
         Response response = client.newCall(request).execute();
         assertEquals(404, response.code());
+    }
+
+    @io.cucumber.java.AfterAll
+    public static void checkApiShutdown() {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("http://localhost:4567/shutdown")
+                .build();
+        try {
+            Response response = client.newCall(request).execute();
+        } catch (IOException e) {
+        }
     }
 }
